@@ -2,13 +2,13 @@ import styled from '@emotion/styled'
 import Header from './Header'
 import Block from './Block'
 
-const LatestBlocks = () => {
+const LatestBlocks = ({ width }) => {
+  const latestBlocksWidth = width / 2
+
   return (
-    <Container>
-      <InnerContainer>
-        <Header />
-        <Block />
-      </InnerContainer>
+    <Container maxWidth={latestBlocksWidth}>
+      <Header />
+      <Block />
     </Container>
   )
 }
@@ -16,17 +16,10 @@ const LatestBlocks = () => {
 export default LatestBlocks
 
 const Container = styled.div`
-  width: 50%;
+  width: 100%;
+  max-width: ${(props) => props.maxWidth}px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  background: pink;
-  padding: 0 10px 0 0;
-  border: 1px solid red;
-`
-
-const InnerContainer = styled.div`
-  width: 100%;
-  background: yellow;
 `

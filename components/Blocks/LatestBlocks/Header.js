@@ -13,11 +13,12 @@ const Header = () => {
 export default Header
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${'' /* width: 100%; */}
-  background: yellow;
+  padding: 10px 0;
+  ${'' /* background: yellow; */}
 `
 
 const Button = styled.button``

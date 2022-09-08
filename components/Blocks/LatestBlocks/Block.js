@@ -13,10 +13,12 @@ const Block = () => {
 export default Block
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
   background: #fff;
   padding: 0 10px;
+  border: 1px solid red;
 `

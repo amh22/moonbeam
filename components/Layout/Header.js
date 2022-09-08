@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styled from '@emotion/styled'
-import NavBar from './NavBar'
 import logo from '../../public/logo@2x.webp'
 
 const Header = () => {
@@ -9,7 +8,6 @@ const Header = () => {
       <LogoWrapper>
         <Image src={logo} alt='Subscan Moonbeam logo' />
       </LogoWrapper>
-      {/* <NavBar /> */}
     </Container>
   )
 }

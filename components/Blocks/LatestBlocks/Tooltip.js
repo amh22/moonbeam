@@ -39,7 +39,7 @@ const ToolTip = () => {
                 margin: '0px',
               }}
             >
-              <Arrow width='14px' height='21px' fill='#fff' strokeColor='#000' />
+              <Arrow width='14px' height='21px' fill='#fff' strokeColor='#302b3c' />
             </div>
           </div>
         </Tooltip.Content>

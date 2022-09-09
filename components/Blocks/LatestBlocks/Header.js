@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { HiOutlineCube } from 'react-icons/hi'
+import { IoCubeOutline } from 'react-icons/io5'
 import Text from '../../Shared/Text'
 import Spacer from '../../Shared/Spacer'
 import Button from '../../Shared/Button'
@@ -8,9 +8,9 @@ const Header = () => {
   return (
     <Container>
       <Heading>
-        <HiOutlineCube color='#000' size='20px' />
+        <IoCubeOutline color='#302b3c' size='20px' />
         <Spacer marginRight='10px' />
-        <Text>Latest Blocks</Text>
+        <Text weight='600'>Latest Blocks</Text>
       </Heading>
       <Button type='button'>View All</Button>
     </Container>

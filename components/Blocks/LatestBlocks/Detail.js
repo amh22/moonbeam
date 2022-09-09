@@ -9,9 +9,9 @@ const Detail = ({ blockNo, extrinsics, events }) => {
   return (
     <Container>
       <BlockHeight>
-        <Text>Block#</Text>
+        <Text weight='600'>Block#</Text>
         <Spacer marginRight='8px' />
-        <TextLink weight='600' size='1.125rem'>
+        <TextLink weight='600' size='16px'>
           {blockNo}
         </TextLink>
       </BlockHeight>

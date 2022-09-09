@@ -33,8 +33,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 20px 0 10px 0;
-  ${'' /* background: pink; */}
+  margin: 20px 0 15px 0;
 `
 
 const BlockHeight = styled.div`
@@ -42,8 +41,6 @@ const BlockHeight = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  ${'' /* background: pink; */}
-  ${'' /* border: 1px solid black; */}
 `
 
 const BlockIncludes = styled.div`
@@ -52,6 +49,4 @@ const BlockIncludes = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 4px 0 0 0;
-  ${'' /* background: yellow; */}
-  ${'' /* border: 1px solid black; */}
 `

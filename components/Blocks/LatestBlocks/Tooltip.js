@@ -8,7 +8,7 @@ const ToolTip = () => {
   return (
     <Tooltip.Provider delayDuration='100'>
       <Tooltip.Root>
-        <Tooltip.Trigger style={{ borderRadius: '50%', padding: 0, border: 'none' }}>
+        <Tooltip.Trigger style={{ borderRadius: '50%', padding: 0, border: 'none', background: '#fff' }}>
           {isPending ? <BsClock color='#ffb600' size='20px' /> : <BsCheckCircle color='#6bc10e' size='20px' />}
         </Tooltip.Trigger>
         <Tooltip.Content

@@ -1,10 +1,17 @@
 import styled from '@emotion/styled'
+import { HiOutlineCube } from 'react-icons/hi'
 import Text from '../../Shared/Text'
+import Spacer from '../../Shared/Spacer'
+import Button from '../../Shared/Button'
 
 const Header = () => {
   return (
     <Container>
-      <Text>Latest Blocks</Text>
+      <Heading>
+        <HiOutlineCube color='#000' size='20px' />
+        <Spacer marginRight='10px' />
+        <Text>Latest Blocks</Text>
+      </Heading>
       <Button type='button'>View All</Button>
     </Container>
   )
@@ -20,5 +27,8 @@ const Container = styled.div`
   padding: 10px 0;
   ${'' /* background: yellow; */}
 `
-
-const Button = styled.button``
+const Heading = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`

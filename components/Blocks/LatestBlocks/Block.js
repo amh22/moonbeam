@@ -7,31 +7,30 @@ const blockData = [
     blockNo: '1,800,824',
     extrinsics: '3',
     events: '38',
-    time: '24 seconds ago',
+    time: '24s ago',
   },
   {
     blockNo: '1,800,823',
     extrinsics: '5',
     events: '7',
-    time: '36 seconds ago',
+    time: '36s ago',
   },
   {
     blockNo: '1,800,822',
     extrinsics: '0',
     events: '2',
-    time: '48 seconds ago',
+    time: '48s ago',
   },
   {
     blockNo: '1,800,821',
     extrinsics: '10',
     events: '25',
-    time: '60 seconds ago',
+    time: '60s ago',
   },
 ]
 
 const Block = () => {
   return blockData.map((block) => {
-    console.log('Block: ', block)
     const { blockNo, extrinsics, events, time } = block
     return (
       <Container key={blockNo}>
@@ -52,6 +51,5 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   ${'' /* background: yellow; */}
-
   border-bottom: 1px solid #dcdfe6;
 `

@@ -11,10 +11,11 @@ const TextLink = ({ href, color, weight, size, children }) => {
 export default TextLink
 
 const Wrapper = styled.a`
-  color: ${(props) => props.color || '#0070f3'};
+  color: ${(props) => props.color || '#0085ff'};
   font-weight: ${(props) => props.weight || '400'};
   font-size: ${(props) => props.size || '1rem'};
   text-decoration: none;
+  cursor: pointer;
   &:hover {
     opacity: 0.75;
   }

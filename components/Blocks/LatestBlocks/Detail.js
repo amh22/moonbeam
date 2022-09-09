@@ -11,16 +11,16 @@ const Detail = ({ blockNo, extrinsics, events }) => {
       <BlockHeight>
         <Text>Block#</Text>
         <Spacer marginRight='8px' />
-        <TextLink weight='700' size='1.125rem'>
+        <TextLink weight='600' size='1.125rem'>
           {blockNo}
         </TextLink>
       </BlockHeight>
       <BlockIncludes>
-        <Text>Includes</Text>
+        <Text color='#9d9d9d'>Includes</Text>
         <Spacer marginRight='8px' />
-        <Text>{extrinsics} Extrinsics</Text>
+        <TextLink>{extrinsics} Extrinsics</TextLink>
         <Spacer marginRight='8px' />
-        <Text>{events} Events</Text>
+        <TextLink>{events} Events</TextLink>
         <Spacer marginRight='8px' />
       </BlockIncludes>
     </Container>

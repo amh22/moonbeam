@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
-const TextLink = ({ href, color, weight, children }) => {
+const TextLink = ({ href, color, weight, size, children }) => {
   return (
-    <Wrapper href={href} color={color} weight={weight}>
+    <Wrapper href={href} color={color} weight={weight} size={size}>
       {children}
     </Wrapper>
   )

@@ -4,28 +4,28 @@ import Status from './Status'
 
 const blockData = [
   {
-    blockNo: '1,800,824',
+    blockNo: '1,836,827',
     extrinsics: '3',
     events: '38',
-    time: '24s ago',
+    time: '24 secs ago',
   },
   {
-    blockNo: '1,800,823',
+    blockNo: '1,836,826',
     extrinsics: '5',
     events: '7',
-    time: '36s ago',
+    time: '36 secs ago',
   },
   {
-    blockNo: '1,800,822',
+    blockNo: '1,836,825',
     extrinsics: '0',
     events: '2',
-    time: '48s ago',
+    time: '48 secs ago',
   },
   {
-    blockNo: '1,800,821',
+    blockNo: '1,836,824',
     extrinsics: '10',
     events: '25',
-    time: '60s ago',
+    time: '1 min ago',
   },
 ]
 

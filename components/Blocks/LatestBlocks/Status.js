@@ -3,14 +3,14 @@ import Spacer from '../../Shared/Spacer'
 import Text from '../../Shared/Text'
 import ToolTip from './Tooltip'
 
-const Status = ({ time }) => {
-  const isPending = true
+const Status = ({ time, finalized }) => {
+  const isFinalized = finalized
 
   return (
     <Container>
       <Text color='#9d9d9d'>{time}</Text>
       <Spacer marginLeft='8px' />
-      <ToolTip />
+      <ToolTip finalized={isFinalized} />
     </Container>
   )
 }

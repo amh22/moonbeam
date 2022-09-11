@@ -1,10 +1,19 @@
 import styled from '@emotion/styled'
+import { IoCubeOutline } from 'react-icons/io5'
+import { COLORS } from '../../../constants'
 import Text from '../../Shared/Text'
+import Spacer from '../../Shared/Spacer'
+import Button from '../../Shared/Button'
 
 const Header = () => {
+  const { text } = COLORS
   return (
     <Container>
-      <Text>Latest Blocks</Text>
+      <Heading>
+        <IoCubeOutline color={text} size='20px' />
+        <Spacer marginRight='10px' />
+        <Text weight='600'>Latest Blocks</Text>
+      </Heading>
       <Button type='button'>View All</Button>
     </Container>
   )
@@ -18,7 +27,9 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  ${'' /* background: yellow; */}
 `
-
-const Button = styled.button``
+const Heading = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`

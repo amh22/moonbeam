@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import LatestBlocks from '../components/Blocks/LatestBlocks'
 
+// ❕ TODO: Need to fetch 'blocks' from API endpoint before pre-rendering this page
+
 export default function Home() {
   const subscanWidth = 1180
 
@@ -18,6 +20,4 @@ const SubscanContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${'' /* border: 1px solid #000; */}
-  ${'' /* background: pink; */}
 `

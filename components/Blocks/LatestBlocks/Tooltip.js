@@ -14,7 +14,7 @@ const ToolTip = ({ finalized }) => {
         </Tooltip.Trigger>
         <Tooltip.Content
           style={{
-            background: { white },
+            background: white,
             border: `1px solid ${text}`,
             borderRadius: '4px',
             padding: '8px 12px',

@@ -8,7 +8,10 @@ import Loading from '../../Shared/Loading'
 import Error from '../../Shared/Error'
 
 const Block = () => {
-  const { data, error } = useSWR(GetLatestBlocks)
+  const { data, error } = useSWR(GetLatestBlocks, {
+    refreshInterval: 12000,
+    refreshWhenHidden: true,
+  })
 
   if (!error && !data) return <Loading />
 

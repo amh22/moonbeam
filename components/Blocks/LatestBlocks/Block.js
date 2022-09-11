@@ -5,13 +5,14 @@ import { timeSince } from '../../../utils/utils'
 import Detail from './Detail'
 import Status from './Status'
 import Loading from '../../Shared/Loading'
+import Error from '../../Shared/Error'
 
 const Block = () => {
   const { data, error } = useSWR(GetLatestBlocks)
 
   if (!error && !data) return <Loading />
 
-  if (error) return 'Sorry there has been an error'
+  if (error) return <Error />
 
   const lastestBlockData = data ? data.blocks : []
 

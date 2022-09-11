@@ -6,7 +6,7 @@ import Spacer from '../../Shared/Spacer'
 
 // ❕ Note: This component and it's children controls the height of the block 'row'
 
-const Detail = ({ blockNo, extrinsics, events }) => {
+const Detail = ({ height, extrinsics = 'n/a', events = 'n/a' }) => {
   const { greyDark } = COLORS
   return (
     <Container>
@@ -14,7 +14,7 @@ const Detail = ({ blockNo, extrinsics, events }) => {
         <Text weight='600'>Block#</Text>
         <Spacer marginRight='8px' />
         <TextLink weight='600' size='16px'>
-          {blockNo}
+          {height}
         </TextLink>
       </BlockHeight>
       <BlockIncludes>

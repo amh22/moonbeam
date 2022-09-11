@@ -1,15 +1,34 @@
 import styled from '@emotion/styled'
-import { blockData } from './data'
+import useSWR from 'swr'
+import { GetLatestBlocks } from '../../../lib/graphql'
+import { timeSince } from '../../../utils/utils'
 import Detail from './Detail'
 import Status from './Status'
 
 const Block = () => {
-  return blockData.map((block) => {
-    const { blockNo, extrinsics, events, time, finalized } = block
+  const { data, error } = useSWR(GetLatestBlocks)
+
+  if (!error && !data) return 'Loading...'
+  if (error) return 'Sorry there has been an error'
+
+  const lastestBlockData = data.blocks
+
+  return lastestBlockData.map((block) => {
+    const { id, height, extrinsics, events, timestamp } = block
+
+    const blockHeight = height.toLocaleString()
+
+    const timeFromNow = timeSince(timestamp)
+
+    // 👇 TODO: Query API for the below three
+    const extrinsicsCount = extrinsics || 'n/a'
+    const eventsCount = events || 'n/a'
+    const isFinalized = false
+
     return (
-      <Container key={blockNo}>
-        <Detail blockNo={blockNo} extrinsics={extrinsics} events={events} />
-        <Status time={time} finalized={finalized} />
+      <Container key={id}>
+        <Detail height={blockHeight} extrinsics={extrinsicsCount} events={eventsCount} />
+        <Status time={timeFromNow} finalized={isFinalized} />
       </Container>
     )
   })

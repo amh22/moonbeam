@@ -90,4 +90,18 @@ export const blockData = [
     time: '2 mins ago',
     finalized: true,
   },
+  {
+    blockNo: '1,836,815',
+    extrinsics: '0',
+    events: '2',
+    time: '2 mins ago',
+    finalized: true,
+  },
+  {
+    blockNo: '1,836,814',
+    extrinsics: '10',
+    events: '25',
+    time: '3 mins ago',
+    finalized: true,
+  },
 ]

@@ -6,19 +6,19 @@ const LatestBlocks = ({ width }) => {
   const latestBlocksWidth = width / 2
 
   return (
-    <Container maxWidth={latestBlocksWidth}>
+    <PanelContainer maxWidth={latestBlocksWidth}>
       <Header />
-      <BlockContainer>
+      <BlocksContainer>
         <Block />
-      </BlockContainer>
-    </Container>
+      </BlocksContainer>
+    </PanelContainer>
   )
 }
 
 export default LatestBlocks
 
-// Set the max-width of the Latest Blocks content
-const Container = styled.div`
+// Set the max-width of the Latest Blocks panel
+const PanelContainer = styled.div`
   width: 100%;
   max-width: ${(props) => props.maxWidth}px;
   display: flex;
@@ -26,11 +26,15 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: inherit;
+  background: yellow;
+  ${'' /* height: 100%; */}
 `
 
-const BlockContainer = styled.div`
+const BlocksContainer = styled.div`
   width: 100%;
-  max-width: ${(props) => props.maxWidth}px;
+  max-height: calc(100vh - 420px);
+  min-height: 400px;
+  overflow-y: overlay;
   display: flex;
   flex-direction: column;
   justify-content: center;

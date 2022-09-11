@@ -2,6 +2,23 @@ import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
 import styled from '@emotion/styled'
 import { COLORS } from '../../constants'
 
+const ScrollOverlay = ({ children }) => {
+  return (
+    <>
+      <ScrollAreaViewport>{children}</ScrollAreaViewport>
+      <ScrollAreaScrollbar orientation='vertical'>
+        <ScrollAreaThumb />
+      </ScrollAreaScrollbar>
+      <ScrollAreaScrollbar orientation='horizontal'>
+        <ScrollAreaThumb />
+      </ScrollAreaScrollbar>
+      <ScrollAreaCorner />
+    </>
+  )
+}
+
+export default ScrollOverlay
+
 const ScrollAreaViewport = styled(ScrollAreaPrimitive.Viewport)`
   width: 100%;
   height: 100%;
@@ -52,22 +69,3 @@ const ScrollAreaThumb = styled(ScrollAreaPrimitive.Thumb)`
 const ScrollAreaCorner = styled(ScrollAreaPrimitive.Corner)`
   background: #f3f3f3;
 `
-
-import React from 'react'
-
-const ScrollOverlay = ({ children }) => {
-  return (
-    <>
-      <ScrollAreaViewport>{children}</ScrollAreaViewport>
-      <ScrollAreaScrollbar orientation='vertical'>
-        <ScrollAreaThumb />
-      </ScrollAreaScrollbar>
-      <ScrollAreaScrollbar orientation='horizontal'>
-        <ScrollAreaThumb />
-      </ScrollAreaScrollbar>
-      <ScrollAreaCorner />
-    </>
-  )
-}
-
-export default ScrollOverlay

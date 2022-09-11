@@ -1,22 +1,30 @@
 import styled from '@emotion/styled'
-import Text from '../../Shared/Text'
+import { blockData } from './data'
+import Detail from './Detail'
+import Status from './Status'
 
 const Block = () => {
-  return (
-    <Container>
-      <Text>Block# 1,824,503</Text>
-      <Text>24 seconds ago</Text>
-    </Container>
-  )
+  return blockData.map((block) => {
+    const { blockNo, extrinsics, events, time, finalized } = block
+    return (
+      <Container key={blockNo}>
+        <Detail blockNo={blockNo} extrinsics={extrinsics} events={events} />
+        <Status time={time} finalized={finalized} />
+      </Container>
+    )
+  })
 }
 
 export default Block
 
 const Container = styled.div`
+  width: 100%;
+  height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  background: #fff;
-  padding: 0 10px;
+  border-bottom: 1px solid #dcdfe6;
+  &:last-child {
+    border-bottom: none;
+  }
 `

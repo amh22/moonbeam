@@ -4,14 +4,16 @@ import { GetLatestBlocks } from '../../../lib/graphql'
 import { timeSince } from '../../../utils/utils'
 import Detail from './Detail'
 import Status from './Status'
+import Loading from '../../Shared/Loading'
 
 const Block = () => {
   const { data, error } = useSWR(GetLatestBlocks)
 
-  if (!error && !data) return 'Loading...'
+  if (!error && !data) return <Loading />
+
   if (error) return 'Sorry there has been an error'
 
-  const lastestBlockData = data.blocks
+  const lastestBlockData = data ? data.blocks : []
 
   return lastestBlockData.map((block) => {
     const { id, height, extrinsics, events, timestamp } = block

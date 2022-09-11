@@ -1,11 +1,13 @@
 import styled from '@emotion/styled'
+import { COLORS } from '../../constants'
 import PageHead from './PageHead'
 import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
+  const { background } = COLORS
   return (
-    <AppContainer>
+    <AppContainer background={background}>
       <PageHead />
       <Header />
       <Main>{children}</Main>
@@ -20,7 +22,7 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fbfbfd;
+  background-color: ${(props) => props.background};
   padding: 0;
 `
 
@@ -29,7 +31,6 @@ const Main = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;
-  ${'' /* justify-content: center; */}
   align-items: center;
   padding: 2rem 1rem;
 `

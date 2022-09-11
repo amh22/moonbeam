@@ -10,7 +10,7 @@ const Arrow = ({ width, height, fill, strokeColor }) => (
     strokeLinecap='round'
     strokeLinejoin='round'
   >
-    <rect width='240' height='90' fill='#fff' stroke='#fff' strokeWidth='0' />
+    <rect width='240' height='90' fill={fill} stroke={fill} strokeWidth='0' />
     <polyline points='16,72 128,184 240,72' />
   </svg>
 )

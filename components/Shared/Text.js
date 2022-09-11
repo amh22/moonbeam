@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { COLORS } from '../../constants'
 
 const Text = ({ color, size, weight, children }) => {
   return (
@@ -11,7 +12,7 @@ const Text = ({ color, size, weight, children }) => {
 export default Text
 
 const Wrapper = styled.p`
-  color: ${(props) => props.color || '#302b3c'};
+  color: ${(props) => props.color || COLORS.text};
   font-size: ${(props) => props.size || '14px'};
   font-weight: ${(props) => props.weight || '400'};
 `

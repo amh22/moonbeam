@@ -1,5 +1,6 @@
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
 import styled from '@emotion/styled'
+import { COLORS } from '../../constants'
 
 const ScrollAreaViewport = styled(ScrollAreaPrimitive.Viewport)`
   width: 100%;
@@ -30,7 +31,7 @@ const ScrollAreaScrollbar = styled(ScrollAreaPrimitive.Scrollbar)`
 
 const ScrollAreaThumb = styled(ScrollAreaPrimitive.Thumb)`
   flex: 1;
-  background: #dcdbdd;
+  background: ${COLORS.greyMedium};
   border-radius: 10px;
   ${'' /* border-radius: SCROLLBAR_SIZE; */}
   ${'' /* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */}

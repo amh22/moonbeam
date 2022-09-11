@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
+import { COLORS } from '../../../constants'
 import Header from './Header'
 import Block from './Block'
 import ScrollOverlay from '../../Shared/ScrollOverlay'
@@ -43,8 +44,8 @@ const BlocksContainer = styled(ScrollAreaPrimitive.Root)`
   align-items: center;
   ${'' /* padding-right adjusted to offset padding added to the tooltip status icon */}
   padding: 0 18px 0 20px;
-  background: #fff;
-  border: 1px solid #e7eaf3;
+  background: ${COLORS.white};
+  border: 1px solid ${COLORS.greyLight};
   border-radius: 4px;
   box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 5%);
 `

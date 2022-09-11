@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { COLORS } from '../../constants'
 
 const Text = ({ color, fontSize, background, children }) => {
   return (
@@ -13,10 +14,10 @@ export default Text
 const Wrapper = styled.button`
   height: 30px;
   width: 90px;
-  color: ${(props) => props.color || '#53cbc9'};
+  color: ${(props) => props.color || COLORS.secondary};
   font-size: ${(props) => props.fontSize || '14px'};
-  background: ${(props) => props.background || '#fff'};
-  border: 1px solid #53cbc9;
+  background: ${(props) => props.background || COLORS.background};
+  border: 1px solid ${COLORS.secondary};
   border-radius: 4px;
   cursor: pointer;
   &:hover {

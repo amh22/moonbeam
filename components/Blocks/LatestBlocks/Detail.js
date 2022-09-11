@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { COLORS } from '../../../constants'
 import Text from '../../Shared/Text'
 import TextLink from '../../Shared/TextLink'
 import Spacer from '../../Shared/Spacer'
@@ -6,6 +7,7 @@ import Spacer from '../../Shared/Spacer'
 // ❕ Note: This component and it's children controls the height of the block 'row'
 
 const Detail = ({ blockNo, extrinsics, events }) => {
+  const { greyDark } = COLORS
   return (
     <Container>
       <BlockHeight>
@@ -16,7 +18,7 @@ const Detail = ({ blockNo, extrinsics, events }) => {
         </TextLink>
       </BlockHeight>
       <BlockIncludes>
-        <Text color='#9d9d9d'>Includes</Text>
+        <Text color={greyDark}>Includes</Text>
         <Spacer marginRight='8px' />
         <TextLink>{extrinsics} Extrinsics</TextLink>
         <Spacer marginRight='8px' />

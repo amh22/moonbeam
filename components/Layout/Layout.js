@@ -32,5 +32,8 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
+  @media (min-width: 1024px) {
+    padding: 2rem 1rem;
+  }
 `

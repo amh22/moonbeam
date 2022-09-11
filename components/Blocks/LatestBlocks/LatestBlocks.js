@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
+import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
 import Header from './Header'
 import Block from './Block'
+import ScrollOverlay from '../../Shared/ScrollOverlay'
 
 const LatestBlocks = ({ width }) => {
   const latestBlocksWidth = width / 2
@@ -9,7 +11,9 @@ const LatestBlocks = ({ width }) => {
     <PanelContainer maxWidth={latestBlocksWidth}>
       <Header />
       <BlocksContainer>
-        <Block />
+        <ScrollOverlay>
+          <Block />
+        </ScrollOverlay>
       </BlocksContainer>
     </PanelContainer>
   )
@@ -23,23 +27,22 @@ const PanelContainer = styled.div`
   max-width: ${(props) => props.maxWidth}px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background: inherit;
-  background: yellow;
-  ${'' /* height: 100%; */}
 `
 
-const BlocksContainer = styled.div`
+const BlocksContainer = styled(ScrollAreaPrimitive.Root)`
   width: 100%;
-  max-height: calc(100vh - 420px);
+  max-height: calc(110vh - 421px);
   min-height: 400px;
-  overflow-y: overlay;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 15px;
+  ${'' /* padding-right adjusted to offset padding added to the tooltip status icon */}
+  padding: 0 18px 0 20px;
   background: #fff;
   border: 1px solid #e7eaf3;
   border-radius: 4px;

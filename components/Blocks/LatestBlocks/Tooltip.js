@@ -6,18 +6,20 @@ const ToolTip = ({ finalized }) => {
   return (
     <Tooltip.Provider delayDuration='100'>
       <Tooltip.Root>
-        <Tooltip.Trigger style={{ borderRadius: '50%', padding: 0, border: 'none', background: '#fff' }}>
+        {/* 👇 padding added to icon to increase hover surface area */}
+        <Tooltip.Trigger style={{ borderRadius: '50%', padding: '2px', border: 'none', background: '#fff' }}>
           {finalized ? <BsCheckCircle color='#6bc10e' size='20px' /> : <BsClock color='#ffb600' size='20px' />}
         </Tooltip.Trigger>
         <Tooltip.Content
           style={{
             background: '#fff',
-            border: '1px solid black',
+            border: '1px solid #302b3c',
             borderRadius: '4px',
             padding: '8px 12px',
             margin: '0 0 12px 0',
             fontSize: '14px',
             position: 'relative',
+            zIndex: 999,
           }}
         >
           {finalized ? 'Finalized' : 'Unfinalized'}

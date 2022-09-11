@@ -20,10 +20,11 @@ export default Block
 const Container = styled.div`
   width: 100%;
   height: 85px;
-  ${'' /* margin: 0 0 20px 0; */}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${'' /* background: yellow; */}
   border-bottom: 1px solid #dcdfe6;
+  &:last-child {
+    border-bottom: none;
+  }
 `

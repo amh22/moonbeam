@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
 
-const TextLinkExternal = ({ href, color, weight, children }) => {
+const TextLinkExternal = ({ href = '', color, weight, children }) => {
   return (
     <Link href={href} passHref>
       <Wrapper target='_blank' rel='noopener' color={color} weight={weight}>

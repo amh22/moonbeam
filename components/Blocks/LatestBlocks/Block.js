@@ -9,7 +9,7 @@ import Error from '../../Shared/Error'
 
 const Block = () => {
   const { data, error } = useSWR(GetLatestBlocks, {
-    refreshInterval: 12000,
+    refreshInterval: 10000,
     refreshWhenHidden: true,
   })
 

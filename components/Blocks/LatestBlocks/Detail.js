@@ -43,6 +43,9 @@ const BlockHeight = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  @media (min-width: 414px) {
+    align-items: flex-end;
+  }
 `
 
 const BlockIncludes = styled.div`

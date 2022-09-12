@@ -7,4 +7,5 @@ export const COLORS = {
   greyLight: '#e7eaf3',
   greyMedium: '#dcdbdd',
   greyDark: '#9d9d9d',
+  error: '#DB4325',
 }

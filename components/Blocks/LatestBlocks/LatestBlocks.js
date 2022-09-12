@@ -43,9 +43,12 @@ const BlocksContainer = styled(ScrollAreaPrimitive.Root)`
   justify-content: flex-start;
   align-items: center;
   ${'' /* padding-right adjusted to offset padding added to the tooltip status icon */}
-  padding: 0 18px 0 20px;
+  padding: 0 10px 0 10px;
   background: ${COLORS.white};
   border: 1px solid ${COLORS.greyLight};
   border-radius: 4px;
   box-shadow: 0 2px 10px 0 rgb(0, 0, 0, 5%);
+  @media (min-width: 768px) {
+    padding: 0 18px 0 20px;
+  }
 `

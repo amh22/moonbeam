@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import useSWR from 'swr'
 import { GetLatestBlocks } from '../../../lib/graphql'
-import { timeSince } from '../../../utils/utils'
+import { timeSince } from '../../../utils/helpers'
 import Detail from './Detail'
 import Status from './Status'
 import Loading from '../../Shared/Loading'

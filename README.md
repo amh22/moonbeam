@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+Moonbeam is a re-creation of the "Latest Blocks" panel on the <a href="https://moonbeam.subscan.io/">Moonbeam Subscan</a> home page.
 
-## Getting Started
+</h1>
+&nbsp;
 
-First, run the development server:
+<h2 align="center">
+  🚧 Under construction 🚧
+</h2>
+&nbsp;
+<h3 align="center">
+  Please note: this is a beta and is a work in progress
+</h3>
+&nbsp;
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+&nbsp;
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h4 align="left">
+  This app has been built with React and Next.js.
+</h4>
+&nbsp;
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<h4 align="left">
+  Data is provided by this <a href="https://app.subsquid.io/aquarium/archives/moonbeam/subsquid">GraphQL endpoint</a>.
+</h4>
+&nbsp;
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 🚀 Quick start
 
-## Learn More
+Follow the steps below to deploy this app:
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone this repo.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```shell
+    git clone https://github.com/amh22/moonbeam.git
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2.  **Change into the new directory.**
 
-## Deploy on Vercel
+    Navigate into the new project’s directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```shell
+    cd moonbeam/
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3.  **Install dependencies.**
+
+    Install the project’s dependencies.
+
+    ```shell
+    npm install
+    ```
+
+4.  **Run the app.**
+
+    ```shell
+    npm run dev
+    ```
+
+    Your site is now running at http://localhost:3000

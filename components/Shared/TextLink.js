@@ -1,11 +1,14 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 import { COLORS } from '../../constants'
 
-const TextLink = ({ href = '/', color, weight, size, children }) => {
+const TextLink = ({ href = '', color, weight, size, children }) => {
   return (
-    <Wrapper href={href} color={color} weight={weight} size={size}>
-      {children}
-    </Wrapper>
+    <Link href={href} passHref>
+      <Wrapper color={color} weight={weight} size={size}>
+        {children}
+      </Wrapper>
+    </Link>
   )
 }
 

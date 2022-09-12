@@ -23,7 +23,7 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #36124d;
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     background-image: url('/moonbeam-banner.webp');
     background-repeat: no-repeat;
     background-size: cover;
